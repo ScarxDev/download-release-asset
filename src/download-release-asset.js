@@ -10,7 +10,7 @@ async function run() {
     const repo = core.getInput('repo');
     const tag = core.getInput('tag');
     const file = core.getInput('file');
-    const token = core.getInput('token');
+    const auth = core.getInput('auth');
 
     let url, resp, headers, js, assets, asset;
 
@@ -27,7 +27,7 @@ async function run() {
       };
     } else {
       headers = {
-        Authorization: 'token ' + token,
+        Authorization: 'Basic ' + auth,
         Accept: 'application/json',
         'User-Agent': 'request',
       };
