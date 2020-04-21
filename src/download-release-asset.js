@@ -20,7 +20,7 @@ async function run() {
     } else {
       url = api + '/repos/' + owner + '/' + repo + '/releases/tags/' + tag;
     }
-    if (token == '') {
+    if (auth == '') {
       headers = {
         Accept: 'application/json',
         'User-Agent': 'request',
@@ -51,14 +51,14 @@ async function run() {
     //console.log(asset);
 
     // Download asset
-    if (token == '') {
+    if (auth == '') {
       headers = {
         Accept: 'application/octet-stream',
         'User-Agent': 'request',
       };
     } else {
       headers = {
-        Authorization: 'token ' + token,
+        Authorization: 'Basic ' + auth,
         Accept: 'application/octet-stream',
         'User-Agent': 'request',
       };
