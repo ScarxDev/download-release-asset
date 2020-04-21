@@ -13,5 +13,5 @@ This GitHub Action helps download release asset from a private repository with p
     repo: repo_name
     tag: tag_or_latest
     file: file_name
-    token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    auth: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 ```
