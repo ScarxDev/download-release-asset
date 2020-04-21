@@ -10,7 +10,7 @@ inputs:
     required: true
   file:
     required: true
-  token:
+  auth:
     required: false
 
 runs:
