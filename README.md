@@ -5,7 +5,7 @@ This GitHub Action helps download release asset from a private repository with p
 # Usage
 
 ```
-- name: Download Release Asset
+- name: Download Release Assets
   id: download_release_asset
   uses: noobly314/download-release-asset@v1
   with:
